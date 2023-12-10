@@ -1,0 +1,33 @@
+﻿@model TP_GRUPO3.Models.Usuario
+
+@if (TempData["LoginError"] != null)
+{<div class="alert alert-danger">
+        @TempData["LoginError"]
+    </div>}
+
+<div >
+
+    <h1>Inicio de sesion</h1>
+
+
+    <form asp-controller="Sesion" asp-action="Login" method="post">
+        <div >
+            <p >Ingrese su Usuario:</p>
+            
+            <input  type="text" name="Username" />
+        </div>
+        <br />
+        <div >
+            <p >Ingrese su Contraseña:</p>
+            
+            <input  type="password" name="Password" />
+            
+        </div>
+        <br />
+        <input  type="submit" value="Ingresar" />
+    </form>
+    <br />
+    <p class="">
+        <a asp-controller="Sesion" asp-action="CrearUsuario" >Registrar nuevo usuario</a>
+    </p>
+</div>

@@ -1,0 +1,52 @@
+html {
+  font-size: 14px;
+}
+p {
+    font-size: 24px;
+    font-family: 'Times New Roman';
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-image: url('Imagenes/FONDO.png');
+  color: floralwhite;
+}
+
+#nav {
+    background-image: url('Imagenes/Barra.png');
+    border-bottom: 2px solid white;
+    font-family: 'Century Gothic';
+    font-size: 18px;
+    color: floralwhite;
+}
+
+footer {
+
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+img{
+    border: 6px solid rgb(191, 96,0);
+}
+tr{
+    color: white;
+}
+td {
+    color: white;
+}
+
+
+

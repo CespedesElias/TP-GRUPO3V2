@@ -1,0 +1,53 @@
+﻿@model IEnumerable<TP_GRUPO3.Models.Carrito>
+
+@{
+    ViewData["Title"] = "Carrito";
+}
+
+<h1>Ventas</h1>
+
+<p>
+    <a asp-action="Create">Agregar compra</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.usuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.producto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.producto.cantidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.producto.valor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                    @Html.DisplayFor(modelItem => item.usuario.nombreApellido)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.producto.nombreColor)
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.producto.cantidad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.producto.valor)
+                </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.id">Detalle</a> |
+                <a asp-action="Delete" asp-route-id="@item.id">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

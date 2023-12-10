@@ -1,0 +1,49 @@
+﻿@model TP_GRUPO3.Models.Carrito
+
+@{
+    ViewData["Title"] = "Detalles";
+}
+
+<h1>Detalle</h1>
+
+<div>
+    <h4>Carrito</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.usuario)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.usuario.nombreApellido)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.producto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.producto.nombreColor)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.producto.cantidad)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.producto.cantidad)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.producto.valor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.producto.valor)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.producto.precio)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.producto.precio)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.id">Editar</a> |
+    <a asp-action="Index">Volver</a>
+</div>
